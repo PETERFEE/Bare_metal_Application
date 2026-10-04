@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>E:/7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc</DIR>
+  <DIR>E:\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>E:/7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Debug\Prac_1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Prac_1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Prac_1.map</FILE>
+  <FILE>Prac_1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>13</LINE></MAIN>
+  <GPIO_INIT><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>134</LINE></GPIO_INIT>
+  <TIMER_INIT><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>141</LINE></TIMER_INIT>
+  <EBI_IO_INIT><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>74</LINE></EBI_IO_INIT>
+  <EBI_INIT><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>107</LINE></EBI_INIT>
+  <MAIN_LOOP><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>40</LINE></MAIN_LOOP>
+  <PA7_is_high><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>55</LINE></PA7_is_high>
+  <PA7_is_low><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>46</LINE></PA7_is_low>
+  <DELAY_67MS><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>152</LINE></DELAY_67MS>
+  <loop><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>158</LINE></loop>
+  <overflow><FILE>C:\Users\fengh\Documents\Atmel Studio\7.0\Prac_1\Prac_1\Prac_EBI.asm</FILE><LINE>166</LINE></overflow>
+ </LABELS>
+</ASSEMBLER_INFO>

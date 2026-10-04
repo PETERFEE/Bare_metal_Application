@@ -1,0 +1,99 @@
+;************************************************************************
+;  File name: lab1.asm
+;  Author:  Christopher Crary
+;  Last Modified By: Dr. Schwartz
+;  Last Modified On: 27 Aug 2025
+;  Description: To filter data stored within a predefined input table 
+;				based on a set of given conditions and store 
+;				a subset of filtered values into an output table.
+;************************************************************************
+;*********************************INCLUDES*******************************
+.include "ATxmega128a1udef.inc"   
+;***********END OF INCLUDES******************************
+;*********************************EQUATES********************************
+; potentially useful expressions
+.equ NULL = 0
+.equ ThirtySeven = 3*7 + 37/3 - (3-7)  ; 21 + 12 + 4
+
+;***********END OF EQUATES*******************************
+;***********MEMORY CONFIGURATION*************************
+; program memory constants (if necessary)
+.cseg
+.org ???
+IN_TABLE:
+.db 
+.db NULL
+; label below is used to calculate size of input table
+IN_TABLE_END:
+
+; data memory allocation (if necessary)
+.dseg
+; initialize the output table starting address
+.org ???
+OUT_TABLE:
+.byte (IN_TABLE_END - IN_TABLE)
+;***********END OF MEMORY CONFIGURATION***************
+;***********MAIN PROGRAM*******************************
+.cseg
+; configure the reset vector 
+;	(ignore meaning of "reset vector" for now)
+.org 0x0
+	rjmp MAIN
+
+; place main program after interrupt vectors 
+;	(ignore meaning of "interrupt vectors" for now)
+.org 0x100
+MAIN:
+; point appropriate indices to input/output tables (is RAMP needed?)
+
+; loop through input table, performing filtering and storing conditions
+LOOP:
+	; load value from input table into an appropriate register
+	
+
+	; determine if the end of table has been reached (perform general check)
+
+	; if end of table (EOT) has been reached, i.e., the NULL character was 
+	; encountered, the program should branch to the relevant label used to
+	; terminate the program (e.g., DONE)
+
+	; if EOT was not encountered, perform the first specified 
+	; overall conditional check on loaded value (CONDITION_1)
+CHECK_1:
+	; check if the CONDITION_1 is met (bit 7 of # is cleared); 
+	;   if not, branch to FAILED_CHECK1
+
+	; since the CONDITION_1 is met, perform the specified operation
+	;   (multiply # by 2, unsigned)
+
+	; check if CONDITION_1a is met (result < 111); if so, then 
+	;   jump to LESS_THAN_111; else store nothing and go back to LOOP
+	
+	rjmp LOOP
+
+LESS_THAN_111:
+	; add 12 and store the result
+
+	rjmp LOOP
+	
+FAILED_CHECK1:
+	; since the CONDITION_1 is NOT met (bit 7 of # is set),
+	;    perform the second specified operation 
+	;    (divide by 2 [unsigned])
+
+	; check if CONDITION_2b is met (result >= 71); if so, jump to
+	;    GREATER_EQUAL_71 (and do the next specified operation);
+	;    else store nothing and go back to LOOP	
+
+	rjmp LOOP
+	
+GREATER_EQUAL_71:
+	; add 7 and store the result 
+
+	;go back to LOOP
+	rjmp LOOP
+	
+; end of program (infinite loop)
+DONE: 
+	rjmp DONE
+;***********END OF MAIN PROGRAM **********************

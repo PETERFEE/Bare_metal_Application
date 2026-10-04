@@ -1,0 +1,15 @@
+Quartus Prime Archive log --	C:/Users/fengh/OneDrive/Desktop/EEL4744C/LAB4/PLD/LAB4_BNANDs.qarlog
+
+Archive:	C:/Users/fengh/OneDrive/Desktop/EEL4744C/LAB4/PLD/LAB4_BNANDs.qar
+Date:		Mon Oct 13 16:00:20 2025
+Quartus Prime		22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/fengh/OneDrive/Desktop/EEL4744C/LAB4/PLD/NANDs.bdf
+C:/Users/fengh/OneDrive/Desktop/EEL4744C/LAB4/PLD/NANDs.qpf
+C:/Users/fengh/OneDrive/Desktop/EEL4744C/LAB4/PLD/NANDs.qsf
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 4 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

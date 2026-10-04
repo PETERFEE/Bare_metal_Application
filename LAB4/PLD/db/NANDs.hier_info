@@ -1,0 +1,13 @@
+|NANDs
+IN_EN <= inst99.DB_MAX_OUTPUT_PORT_TYPE
+CS2 => inst5.IN0
+Q[0] => inst6.IN0
+Q[1] => inst2.IN1
+Q[2] => inst2.IN2
+PK[6] => inst2.IN4
+PK[7] => inst7.IN0
+RE => inst99.IN1
+OUT_EN <= inst.DB_MAX_OUTPUT_PORT_TYPE
+WE => inst.IN1
+
+

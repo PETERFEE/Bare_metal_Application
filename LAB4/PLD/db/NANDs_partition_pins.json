@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "IN_EN",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EN",
+					"strict" : false
+				},
+				{
+					"name" : "RE",
+					"strict" : false
+				},
+				{
+					"name" : "CS2",
+					"strict" : false
+				},
+				{
+					"name" : "Q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PK[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PK[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WE",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

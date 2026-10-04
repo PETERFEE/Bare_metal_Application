@@ -1,0 +1,47 @@
+PseudoCode: 
+
+    This is the CONSTANTS 
+    DEFINE INPUT_TABLE_START = 0xDADD        //Program memory start address
+    DEFINE OUTPUT_TABLE_START = 0x3744       // Data memory start address
+    DEFINE EOT = null                        // End-of-table marker 
+
+    // INITIALIZE  
+    input_ptr  <- INPUT_TABLE_START           //  Pointer to the address of current input value
+    output_ptr <- OUTPUT_TABLE_START          //  Pointer to the address of next output location
+
+    //This is the main program loop 
+    LOOP:
+        current_value <- READ_PROGRAM_MEMORY(input_ptr)  // get next byte from input table
+
+        if ( current_value == EOT ){
+            //End of input table reached
+            STORE_DATA_MEMORY(output_ptr, EOT)     // store a NULL to terminate output table
+            EXIT LOOP                                   // Done processing
+        }
+
+      	// CONDITION CHECKS 
+	//case 1 bit7 not set 
+        if ( BIT7(current_value) == 0 ){        // if bit7 is not set(equal to 0)
+            result <- current_value * 2             // Multiply the current value by 2 and store in the result register
+            if ( result ≤ 110 ) {
+                result <- result + 12                    //  Add 12 
+                STORE_DATA_MEMORY(output_ptr, result)   // Save to current location in output table
+                output_ptr <- output_ptr + 1             // Move to next output slot
+            }
+
+        else {
+            //Case 2: Bit 7 set
+            result <- current_value / 2                 // Divide by 2 
+            if ( result > 70 ) {
+                result <- result + 7                     // Add 7 if condition met
+                STORE_DATA_MEMORY(output_ptr, result)   // Save to output table
+                output_ptr <- output_ptr + 1             // Move to next output slot
+            }
+        }
+
+        // Move to next input value
+        input_ptr <- input_ptr + 1 
+
+        // go back to LOOP for next value from the input table 
+	GO TO loop 
+    end LOOP with a infinite loop here
